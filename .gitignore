@@ -1,18 +1,11 @@
-*.gem
-*.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
+file_csv = open('C:/Python33/klas.csv','r',delimiter=",")
+reader = csv.reader(file_csv)
+reader.next()
+suma=0
+for row in reader:
+    suma=suma+row[6]
 
-# YARD artifacts
-.yardoc
-_yardoc
-doc/
+
+print "rezultata e"
+print suma
+file_csv.close()

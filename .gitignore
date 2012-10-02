@@ -1,11 +1,24 @@
-file_csv = open('C:/Python33/klas.csv','r',delimiter=",")
-reader = csv.reader(file_csv)
-reader.next()
-suma=0
-for row in reader:
-    suma=suma+row[6]
 
+require 'csv'
+def process_file_with_csv
+        result 0
+        CSV.foreach("/home/student11a/csv_example.csv","r") do |row|
+                result=result +row[1].to_i
+        end
+        p result
+end
+def process_file
+        f=File.open("/home/student11a/csv_example.csv","r")
+        content= f.read
+        result = 0
+        content.each_line do |line|
+                array=line.split(",")
+                Integer(array[1])
+                result= result + (array[1]).to_i
 
-print "rezultata e"
-print suma
-file_csv.close()
+        end
+        p result
+end
+process_file
+process_file_with_csv
+
